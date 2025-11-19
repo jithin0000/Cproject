@@ -42,8 +42,8 @@ void prepend(Node** head_ref, int data)
 	}
 
 	Node* current = *head_ref;
-	current->next = new_node;
-
+	new_node->next = current;
+	*head_ref = new_node;
 
 }
 
